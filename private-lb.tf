@@ -12,7 +12,7 @@ resource "aws_lb" "alb-private" {
 
 resource "aws_lb_listener" "backend" {
   load_balancer_arn = aws_lb.alb-private.arn
-  port              = 80
+  port              = "80"
   protocol          = "HTTP"
 
   default_action {
